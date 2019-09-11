@@ -1,0 +1,6 @@
+
+
+;Shift operations
+
+MOV R2,0X00000003
+MOV R0,R2,LSL #2

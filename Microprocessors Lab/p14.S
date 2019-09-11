@@ -1,0 +1,15 @@
+
+
+.DATA
+A:.WORD 10,20,30,40,50,60,12,13
+C:.WORD 0
+B:.WORD 0,0,0,0,0,0,0,0,0
+.TEXT
+ LDR R9,=A
+LDR R10,=B
+LDR R11,=C
+L1: LDMIA R9!, {R0-R2}
+		  STMIA R10!, {R0-R2}
+		  CMP   R9, R11	
+    Blt L1
+ 		  SWI 0X011
