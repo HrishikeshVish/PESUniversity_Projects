@@ -1,0 +1,39 @@
+  html, body {
+        height: 100%;
+      }
+
+      body {
+        padding: 100px;
+        font-family: "Product Sans";
+        color: #454545;
+        font-size: 2em;
+      }
+
+
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .details {
+        margin: auto;
+        padding-bottom: 50px;
+      }
+      .in{
+        padding:10px;
+        border-color: #000;
+        border-width: 1px;
+        border-radius: 5px;
+        width: 350px;
+      }
+      .but{
+        padding: 10px;
+        font-family: Comic Sans;
+        color: #454545;
+        background-color: #aabbcc;
+        font-size: 24px;
+        border-radius: 5px;
+        border-width:1px;
+        border-color: #45f45f45;
+      }
