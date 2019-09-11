@@ -1,0 +1,521 @@
+<html>
+
+<style>
+
+.body{
+
+  background-image: url("reg2.jpg");
+}
+
+
+body {margin: 0;}
+
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+  animation: example 5s linear 2s infinite alternate;
+}
+
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) .dropdown-content{
+    background-color: #555;
+    color: white;
+    display: block;
+}
+
+div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 6000px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+#div1 {animation-timing-function: linear;}
+
+input {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 35%;
+    box-sizing: border-box;
+} 
+
+p{
+
+  font-family: Bookman Old Style;
+  font-size: 50px;
+
+}
+.sign{
+  
+  border: none;
+  margin-left: 15%;
+  margin-right:20%;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+
+.body{
+  background-image: url("reg.jpg");
+  position: relative;
+  background-repeat: none;
+  border-image-repeat: none;
+
+}
+
+.but{
+  padding: 10px;
+  background-color: #4CAF50;
+  border-style: none;
+
+}
+.but:hover{
+  background-color: #4CBF50;
+}
+
+select{
+  align-self: center;
+  margin-left: 40%;
+  padding: 10px;
+  border: solid 0.5px;
+  background-color: #FFFFF0;
+  font-size: 25px;
+  border-color: #4CAF50;
+
+}
+
+#text{
+  align-self: center;
+  margin-left: 40%;
+  padding: 10px;
+  border: solid 0.5px;
+  background-color: #FFFFF0;
+  
+  border-color: #4CAF50;
+}
+
+input{
+  border: solid 0.5px;
+  background-color: #FFFFF0;
+  padding: 20px;
+  border-color: #4CAF50;
+}
+
+#a{
+  background-color:#4CAF50;
+}
+
+#a:hover{
+  background-color: #4DBF50;
+}
+
+#b{
+  margin-left: none;
+}
+
+li:hover{
+	  background-color: #F000F9;
+}
+
+ol>li{
+  align-self: left;
+  margin-left: 0%;
+  padding: 15px;
+  border: none;
+  background-color: #F0FFF9;
+  border: solid 0.5px;
+  list-style-position: inside;
+  border-color: #4CAF50; 
+  border-left: none;
+  border-top:none;
+  border-right:none;
+  width: 1000px;
+  font-family: Bookman Old Style;
+  font-size: 15px;
+  font-weight: normal;
+}
+#order:{
+  align-self: left;
+  margin-left: 0%;
+  padding: 10px;
+  border: none;
+  background-color: #4CAF50;
+  
+  border-color: #4CAF50; 
+}
+
+.table{
+  align-self: center;
+  margin-left: 0%;
+  padding: 25px;
+  font-weight: bold;
+  width: 1000px;
+  font-family: Bookman Old Style;
+  font-size: 15px;
+  border-bottom: solid 2px;
+  background-color: #F0FFF0;
+ 
+}
+
+tr{
+  border-bottom: solid 2px;
+}
+
+
+
+.table{
+  align-self: center;
+  margin-left: 0%;
+  padding: 25px;
+  
+  width: 1000px;
+  font-family: Bookman Old Style;
+  font-size: 15px;
+  border-collapse: collapse;;
+  border-bottom: 1px;
+  margin-left: 100px;
+  background-color: #FCFFF0;
+ 
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+</style>
+<body>
+  <div id="div1" align="center">
+<ul class="sidenav">
+
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news" class="dropdown">NBA</a>
+  	<ul class="dropdown-content"> NBA 
+
+	<ul> Atlantic
+	<ul>
+	<li><span>Boston</span> Celtics</a></li>
+	<li><span>Brooklyn</span> Nets</a></li>
+	<li><span>New York</span> Knicks</a></li>
+	<li><span>Philadelphia</span> 76ers</a></li>
+	<li><span>Toronto</span> Raptors</a></li>
+</ul>
+</ul>
+
+<ul> Central
+	<ul>
+
+	<li><span>Chicago</span> Bulls</a></li>
+	<li><span>Cleveland</span> Cavaliers</a></li>
+	<li><span>Detroit</span> Pistons</a></li>
+	<li><span>Milwaukee</span> Bucks</a></li>
+	<li><span>Indiana</span> Pacers</a></li>
+</ul>
+</ul>
+
+<ul> Southeast
+	<ul>
+
+	<li><span>Atlanta</span> Hawks</a></li>
+	<li><span>Charlotte</span> Hornets</a></li>
+	<li><span>Miami</span> Heat</a></li>
+	<li><span>Orlando</span> Magic</a></li>
+	<li><span>Washington</span> Wizards</a></li>
+</ul>
+</ul>
+
+<ul> Southwest
+	<ul>
+
+	<li><span>Dallas</span> Mavericks</a></li>
+	<li><span>Houston</span> Rockets</a></li>
+	<li><span>Memphis</span> Grizzlies</a></li>
+	<li><span>New Orleans</span> Pelicans</a></li>
+	<li><span>San Antonio</span> Spurs</a></li>
+</ul>
+</ul>
+
+<ul> Northwest 
+	<ul>
+
+	<li><span>Denver</span> Nuggets</a></li>
+	<li><span>Minnesota</span> Timberwolves</a></li>
+	<li><span>Oklahoma City</span> Thunder</a></li>
+	<li><span>Portland</span> Trail Blazers</a></li>
+	<li><span>Utah</span> Jazz</a></li>
+</ul>
+</ul>
+
+<ul> Pacific
+	<ul>
+
+	<li><span>Golden State</span> Warriors</a></li>
+	<li><span>Los Angeles</span> Clippers</a></li>
+	<li><span>Los Angeles</span> Lakers</a></li>
+	<li><span>Phoenix</span> Suns</a></li>
+	<li><span>Sacramento</span> Kings</a></li>
+</ul>
+</ul>
+</ul>
+</li>
+  <li><a href="#contact">NFL</a></li>
+  <li><a href="#about">Cricket</a></li>
+  <li id= "signup" align="right"> <a href="form.html"> Sign Up</a></li>
+</ul>
+</div>
+
+
+
+<ul> NFL
+<ul> AFC East  
+	<ul>
+	<li><span>Buffalo</span> Bills</a></li>
+	<li ><span>Miami</span> Dolphins</a></li>
+	<li><span>New England</span> Patriots</a></li>
+	<li><span>New York</span> Jets</a></li>
+</ul>
+
+</ul>
+<ul> AFC North
+	<ul>
+	<li><span>Baltimore</span> Ravens</a></li>
+	<li><span>Cincinnati</span> Bengals</a></li>
+	<li><span>Cleveland</span> Browns</a></li>
+
+</ul>
+</ul>
+<ul> AFC South
+	<ul>
+	<li><span>Houston</span> Texans</a></li>
+	<li><span>Indianapolis</span> Colts</a></li>
+	<li><span>Jacksonville</span> Jaguars</a></li>
+	<li><span>Tennessee</span> Titans</a></li>
+
+</ul>
+</ul>
+
+
+<ul> AFC West
+	<ul>
+
+	<li><span>Denver</span> Broncos</a></li>
+	<li><span>Kansas City</span> Chiefs</a></li>
+	<li><span>Oakland</span> Raiders</a></li>
+	<li><span>Los Angeles</span> Chargers</a></li>
+
+</ul>
+</ul>
+
+
+<ul> NFC East
+	<ul>
+	<li><span>Dallas</span> Cowboys</a></li>
+	<li><span>New York</span> Giants</a></li>
+	<li><span>Philadelphia</span> Eagles</a></li>
+	<li><span>Washington</span> Redskins</a></li>
+
+</ul>
+</ul>
+
+
+<ul> NFC North
+	<ul>
+	<li><span>Chicago</span> Bears</a></li>
+	<li><span>Detroit</span> Lions</a></li>
+	<li><span>Green Bay</span> Packers</a></li>
+	<li><span>Minnesota</span> Vikings</a></li>
+</ul>
+</ul>
+
+<ul> NFC South
+	<ul>
+	<li/><span>Atlanta</span> Falcons</a></li>
+	<li><span>Carolina</span> Panthers</a></li>
+	<li><span>New Orleans</span> Saints</a></li>
+	<li><span>Tampa Bay</span> Buccaneers</a></li>
+</ul>
+</ul>
+
+<ul> NFC West
+	<ul>
+	<li><span>Arizona</span> Cardinals</a></li>
+	<li><span>San Francisco</span> 49ers</a></li>
+	<li><span>Seattle</span> Seahawks</a></li>
+	<li><span>Los Angeles</span> Rams</a></li>
+</ul>
+</ul>
+</ul>
+
+
+
+
+
+
+
+
+
+<ul >NHL
+
+
+<ul> Atlantic
+	<ul>
+	<li><span>Boston</span> Bruins</a></li>
+	<li><span>Buffalo</span> Sabres</a></li>
+	<li ><span>Detroit</span> Red Wings</a></li>
+	<li ><span>Florida</span> Panthers</a></li>
+	<li><span>Montreal</span> Canadiens</a></li>
+	<li><span>Ottawa</span> Senators</a></li>
+	<li><span>Tampa Bay</span> Lightning</a></li>
+	<li><span>Toronto</span> Maple Leafs</a></li>
+</ul>
+</ul>
+
+<ul> Metropolitan <ul>
+	<li><span>Carolina</span> Hurricanes</a></li>
+	<li><span>Columbus</span> Blue Jackets</a></li>
+	<li><span>New Jersey</span> Devils</a></li>
+	<li><span>New York</span> Islanders</a></li>
+	<li><span>New York</span> Rangers</a></li>
+	<li><span>Philadelphia</span> Flyers</a></li>
+	<li><span>Pittsburgh</span> Penguins</a></li>
+	<li><span>Washington</span> Capitals</a></li>
+</ul>
+</ul>
+
+<ul> Central <ul>
+	<li><span>Chicago</span> Blackhawks</a></li>
+	<li><span>Colorado</span> Avalanche</a></li>
+	<li><span>Dallas</span> Stars</a></li>
+	<li><span>Minnesota</span> Wild</a></li>
+	<li><span>Nashville</span> Predators</a></li>
+	<li><span>St. Louis</span> Blues</a></li>
+	<li><span>Winnipeg</span> Jets</a></li>
+</ul>
+</ul>
+
+<ul> Pacific 
+	<ul>
+
+	<li><span>Anaheim</span> Ducks</a></li>
+	<li><span>Arizona</span> Coyotes</a></li>
+	<li><span>Los Angeles</span> Kings</a></li>
+	<li><span>Calgary</span> Flames</a></li>
+	<li><span>Edmonton</span> Oilers</a></li>
+	<li><span>San Jose</span> Sharks</a></li>
+	<li><span>Vancouver</span> Canucks</a></li>
+	<li><span>Vegas</span> Golden Knights</a></li>
+</ul>
+</ul>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<html>
+
+<head>
+	<title> Comment Section </title>
+</head>
+
+<body style = "background-color: #D5D5D5; margin:0px">
+	
+<style>
+	header {
+
+    padding: 0.5px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background-color: #388F9D;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    margin-left: 0px;
+}
+footer {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    font-style: italic;
+
+
+}
+button{
+	background-color: #062950;
+	padding:12px;
+	color:#FFFFFF;
+	border:4px solid #FFFFFF;
+	margin-left: 20px;
+}
+
+textarea{
+	margin-left: 10px;
+	border:none;
+	border-radius:10px;
+}
+
+p{
+	margin-left: 20px;
+	font-family:"Charcoal,sans-serif";
+	font-size:20px;
+	border-radius: 10px;
+	border: "1px solid #C1C1C1";
+	background-color:#FFFFFF;
+	
+}
+p.p1{
+	margin-left: 20px;
+	font-family:"Charcoal,sans-serif";
+	font-size:20px;
+	border-radius: 10px;
+	border: "1px solid #C1C1C1";
+	background-color:#FFFFFF;
+}
+</style>
+
+<header>
+<p class = "p1" align = "left" style="background-color: #388F9D;"><i><b> Hrishikesh V Section C PES1201700276</b></i></p>
+</header>
+
+<br>
+<br>
+<hr>
+
+<br>
+<br>
+<div align="left" > <input type="button" align="left" value="Add Post" onclick="comment(0,0);" style="background-color:#062950; padding:12px; color:#FFFFFF; border:4px solid #FFFFFF; margin-left: 10px; "></div>
+<script>
+
+	function comment(i,j){	
+
+		var p4 = document.createElement('p');
+		var p1 = document.createElement('textarea');
+		var p2 = document.createElement('p');
+
+		p1.placeholder = "Type Here";
+		p1.placeholder.align="center";
+		
+		p1.style.borderLeft = "0px";
+		p1.style.borderRight = "0px";
+		
+		p1.style.marginLeft = "30px";
+		var p3 = document.createElement('p');	
+		var div = document.createElement('div');		
+		var button2 = document.createElement('button');
+		
+		div.style.border="#000000";
+		p1.rows=12;
+		p1.cols=60;
+		button2.textContent="Submit";
+		button2.style.padding="12px";
+		button2.style.marginLeft = "20px";
+
+		p2.textContent= "\n\n";
+		p3.textContent= "\n\n";
+
+		div.appendChild(p2);
+		div.appendChild(p1);
+		div.appendChild(p3);
+		div.appendChild(button2);
+		document.body.appendChild(div);
+		
+		var msg = p1.value;		
+		p4.innerHTML = msg;
+		div.appendChild(p4);
+
+	if(i==0){
+
+		document.body.appendChild(div);
+		button2.onclick=function() {fun(p1,p4,div,button2,document.body)};
+
+	}
+
+	else{
+
+		var p5 = document.createElement('p');
+		p5.innerHTML = "          \t";
+		j.appendChild(p5);
+		div.style.margin	="50px";
+		j.appendChild(div);
+		button2.onclick=function() {fun(p1,p4,div,button2,j)};
+	}
+
+	}
+function fun(p1,p4,div,button2, parent){
+
+	var obj = {clicks:0, like:0};
+	obj.like = document.createElement('button');
+	obj.clicks = 0;
+
+	var com = document.createElement('button');
+	var remove = document.createElement('button');
+	var div2 = document.createElement('div');
+	var nl = document.createElement('p');
+	var tab1 = document.createElement('p');
+	var tab2 = document.createElement('p');
+
+	com.style.marginLeft="20px";
+
+	nl.textContent = "\n\n";
+	tab1.innerHTML="\t\t";
+	
+
+	obj.like.textContent = "Like";
+	obj.like.style.padding = "8px";
+	obj.like.onclick = function(){click(tab2,obj)};
+	div2.appendChild(tab2);
+	remove.textContent = "Remove";
+	remove.style.padding = "8px";
+	
+
+	remove.onclick = function(){rem(div, parent)};
+
+	com.textContent = "Comment";
+	com.style.padding = "8px";
+	com.onclick=function(){comment(1,div2)};
+	p4.innerHTML = p1.value;
+	p4.style.margin = "20px";
+	div.removeChild(p1);
+	div.removeChild(button2);
+
+
+
+	p4.style.padding = "20px";
+	p4.style.width = "400px";
+	p4.style.height = "150px";
+	div2.appendChild(obj.like);
+	
+	div2.appendChild(com);
+	
+	div2.appendChild(remove);
+	
+
+	div.appendChild(p4);
+	div.appendChild(div2);
+
+}
+	
+	function click(div2,obj){
+		
+		
+		obj.clicks+=1;
+		div2.innerHTML = obj.clicks + "  Likes";
+		div2.style.backgroundColor = "#D5D5D5";
+		
+	}
+
+
+
+	function rem(div,parent){
+
+		parent.removeChild(div);
+	}
+
+	function comment2(div2){
+
+	}
+
+</script>
+
+</body>
+
+</html>

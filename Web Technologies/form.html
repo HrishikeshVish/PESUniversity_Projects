@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+
+<style>
+
+.body{
+
+	background-image: url("reg2.jpg");
+}
+
+<style>
+body {margin: 0;}
+
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+	animation: example 5s linear 2s infinite alternate;
+}
+
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 6000px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+#div1 {animation-timing-function: linear;}
+
+input {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 35%;
+    box-sizing: border-box;
+} 
+
+p{
+
+	font-family: Bookman Old Style;
+	font-size: 50px;
+
+}
+.sign{
+	
+	border: none;
+	margin-left: 15%;
+	margin-right:20%;
+	margin-top: 5%;
+	margin-bottom: 0%;
+}
+
+.body{
+	background-image: url("reg.jpg");
+	position: relative;
+	background-repeat: none;
+	border-image-repeat: none;
+
+}
+
+.but{
+	padding: 10px;
+	background-color: #4CAF50;
+	border-style: none;
+
+}
+.but:hover{
+	background-color: #4CBF50;
+}
+
+select{
+	align-self: center;
+	margin-left: 40%;
+	padding: 10px;
+	border: solid 0.5px;
+	background-color: #FFFFF0;
+	font-size: 25px;
+	border-color: #4CAF50;
+
+}
+
+#text{
+	align-self: center;
+	margin-left: 40%;
+	padding: 10px;
+	border: solid 0.5px;
+	background-color: #FFFFF0;
+	
+	border-color: #4CAF50;
+}
+
+input{
+	border: solid 0.5px;
+	background-color: #FFFFF0;
+	padding: 20px;
+	border-color: #4CAF50;
+}
+
+#a{
+	background-color:#4CAF50;
+}
+
+#a:hover{
+	background-color: #4DBF50;
+}
+
+#b{
+	margin-left: none;
+}
+
+</style>
+
+
+
+
+
+<body class='body'>
+	<h1 align="center" style="font-family: Bahnschrift Light;">Welcome to Sports fever</h1>
+	<h2 align="center" style="font-family: Lucida Sans Unicode;">Enter Your Details</h2>
+
+<div class="sign">
+<form method="get" style="font-family: Verdana;">
+	
+	<br><input type="text" name="Name" placeholder="Name"><br>
+	
+	
+	<br><input type="email" name="Email" placeholder="Email"><br>
+	
+	<br><input type="text" name="Username" placeholder="Username"><br>
+
+
+	<br><input type="password" name="Password" placeholder="Password"><br>
+	
+	
+	<br><input type="password" name="cPassword" placeholder="Confirm Password"><br>
+	
+	<h5 align="center">Select 1st sport preference : </h5>
+	<select id="select" align="center">
+		<option onclick="select()">Football</option>
+		<option onclick="select()">Cricket</option>
+		<option onclick= "select()">Basketball</option>
+	</select>
+	<div class="sign" id="divmain"></div>
+	<br>
+	<h5 align="center">Do you want us to notify you about recent updates : </h5><br>
+	<h5 align="center"> YES</h5><input align="center" type="radio" id="b" name="notify" value="Yes" checked><br>
+	<h5 align="center">NO</h5><input align="center"type="radio" id="b" name="notify" value="No"><br>
+	<br>
+	<br>
+
+	<p> <input type="submit" id = "a" name="submit" value="submit"> <input type="reset" id="a" name="reset"></p>
+</form>
+</form>
+</div>
+
+<script>
+	function select(){
+	if(document.getElementById('text')!=null){
+		var a = document.getElementById('text');
+		a.remove();
+	}
+	var select = document.getElementById('select');
+	var val = select.value;
+	var old = document.createElement("textarea");
+	var d = document.getElementById("divmain");
+	old.cols="60";
+	old.rows = '1';
+	//old.value="team";
+	old.placeholder= "Enter your preffered " + val + " team/Country";
+	old.style.padding = "15px";
+	old.style.marginLeft = "150px";
+	old.id = "text";
+	old.class="sign";
+	d.appendChild(old);
+
+
+	}
+</script>
+</body>
+
+</html>

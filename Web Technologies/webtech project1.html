@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.body{
+
+  background-image: url("reg2.jpg");
+}
+
+#eng{
+	display: none;
+}
+
+#aus{
+	display: none;
+}
+
+#nz{
+	display: none;
+}
+
+#batrank{
+	display: none;
+}
+
+#bowlrank{
+	display: none;
+}
+
+#allroundrank{
+	display: none;
+}
+
+body {margin: 0;}
+
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+  animation: example 5s linear 2s infinite alternate;
+}
+
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+#cricdef{
+  align-self: center;
+  margin-left: 50px;
+  padding: 15px;
+  border: none;
+  background-color: #F00FF0;
+  border: none;
+  text-size: 200px;
+  border-color: #065767; 
+  border-left: none;
+  border-top:none;
+  border-right:none;
+  background-color: #ffffff;
+  color: #065767;
+  font-family: Bookman Old Style;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 6000px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+#div1 {animation-timing-function: linear;}
+
+input {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 35%;
+    box-sizing: border-box;
+} 
+
+p{
+
+  font-family: Bookman Old Style;
+  font-size: 50px;
+
+}
+.sign{
+  
+  border: none;
+  margin-left: 15%;
+  margin-right:20%;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+
+.body{
+  background-image: url("reg.jpg");
+  position: relative;
+  background-repeat: none;
+  border-image-repeat: none;
+
+}
+
+.but{
+  padding: 10px;
+  background-color: #4CAF50;
+  border-style: none;
+
+}
+.but:hover{
+  background-color: #4CBF50;
+}
+
+select{
+  align-self: center;
+  margin-left: 40%;
+  padding: 10px;
+  border: solid 0.5px;
+  background-color: #FFFFF0;
+  font-size: 25px;
+  border-color: #4CAF50;
+
+}
+
+#text{
+  align-self: center;
+  margin-left: 40%;
+  padding: 10px;
+  border: solid 0.5px;
+  background-color: #FFFFF0;
+  
+  border-color: #4CAF50;
+}
+
+input{
+  border: solid 0.5px;
+  background-color: #FFFFF0;
+  padding: 20px;
+  border-color: #4CAF50;
+}
+
+#a{
+  background-color:#4CAF50;
+}
+
+#a:hover{
+  background-color: #4DBF50;
+}
+
+#b{
+  margin-left: none;
+}
+
+li:hover{
+	  background-color: #065767;
+	  color: #ffffff;
+}
+
+ol>li{
+  align-self: left;
+  margin-left: 0%;
+  padding: 15px;
+  border: none;
+  background-color: #ffffff;
+  border: solid 0.5px;
+  list-style-position: inside;
+  border-color: #065767; 
+  border-left: none;
+  border-top:none;
+  border-right:none;
+  width: 1000px;
+  font-family: Bookman Old Style;
+  font-size: 15px;
+  font-weight: normal;
+}
+#order:{
+  align-self: left;
+  margin-left: 0%;
+  padding: 10px;
+  border: none;
+  background-color: #4CAF50;
+  
+  border-color: #4CAF50; 
+}
+
+.table{
+  align-self: center;
+  margin-left: 0%;
+  padding: 25px;
+  font-weight: bold;
+  width: 1000px;
+  font-family: Bookman Old Style;
+  font-size: 15px;
+  border-bottom: solid 2px;
+  background-color: #F0FFF0;
+  
+}
+
+tr{
+  border-bottom: solid 2px;
+}
+
+
+
+.table{
+  align-self: center;
+  margin-left: 0%;
+  padding: 25px;
+  
+  width: 1000px;
+  font-family: Bookman Old Style;
+  font-size: 15px;
+  border-collapse: collapse;;
+  border-bottom: 1px;
+  margin-left: 100px;
+  background-color: #FCFFF0;
+ 
+}
+#tend{
+
+  padding: 15px;
+
+  background-color: #ffffff;
+  border: solid 0.5px;
+  list-style-position: inside;
+  border-color: #065767; 
+ color: #000000;
+  width: 1000px;
+  font-family: Bookman Old Style;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+#tend>li>a{
+	color: #000000;
+	font-size: 100px;
+}
+
+#r1:hover{
+	  background-color: #065767; 
+	  color: #ffffff;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 10000px;
+  position: relative;
+  margin: auto;
+  margin-left: 0px;
+  border: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-left: 0px;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+body {margin: 0;}
+
+header{
+  width: 100%;
+  height: 100px;
+  background-color: #faf9f9;
+}
+
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+  animation: example 5s linear 2s infinite alternate;
+}
+
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 6000px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+#div1 {animation-timing-function: linear;}
+
+input {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 35%;
+    box-sizing: border-box;
+} 
+
+h2{
+  font-family: Bookman Old Style;
+  margin-left: 20px;
+}
+
+p{
+
+  font-family: Bookman Old Style;
+  font-size: 50px;
+
+}
+.sign{
+  
+  border-right-style: groove;
+  margin-left: 15%;
+  margin-right:20%;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+
+.body{
+  background-image: url("pic.jpg");
+  position: relative;
+
+}
+#signup{
+  margin-right: 0px;
+  align-self: right;
+}
+.but{
+  padding: 10px;
+  background-color: #4CAF50;
+  border-style: none;
+
+}
+.but:hover{
+  background-color: #4CBF50;
+}
+
+
+
+
+</style>
+<body class='body'>
+
+<header>
+  <h2 > Sports Network <input type="text" placeholder="Search">
+  </h2>
+
+</header>
+
+<div id="div1" align="center">
+<ul class="sidenav">
+
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">NBA</a></li>
+  <li><a href="#contact">NFL</a></li>
+
+  <li class="dropbtn"><a href="#about" class="active">Cricket</a>
+
+  </li>
+
+  <li id= "signup" align="right"> <a href="form.html"> Sign Up</a></li>
+</ul>
+</div>
+
+
+
+<div>
+
+<div class="slideshow-container" style="text-align: left;">
+
+
+<div class="mySlides fade">   <div class="numbertext">1 / 3</div>   <video   style="width: 100%;" height="440" >
+  <source src="https://www.youtube.com/watch?v=d5LIyNlq2KY" type="video/mp4">
+</video> </div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="test.jpg" style="width:100%">
+  <div class="text">Lebron Lost his Magic in Lakers?</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="odi.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<!--<img src="https://images.indianexpress.com/2015/10/india-south-africa_pti_m.jpg"  style="width:1000px;height:500px;">-->
+<h2 align="center">One Day International matches</h2>
+
+
+
+
+
+<table class="table" border="none">
+<caption>
+<h3>TOP 10 PLAYERS OF THE SEASON</h3>
+</caption> <tr>
+<th> Rank </th>	
+<th> Player name</th>
+<th> Country  </th>
+<th> Rating </th> </tr>
+<tr>
+<td align="center">1</td>	
+<td align="center">AB de Villiers </td>
+<td align ="center"> South Africa</td>
+<td align="center"> 900  </td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">  Virat Kohli</td>
+<td align="center"> India </td>
+<td align="center"> 804 </td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center"> Kane Williamson </td>
+<td align ="center"> New Zealand  </td>
+<td align="center"> 788 </td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center"> Tillekeratne Dilshan </td>
+<td align ="center">Sri Lanka </td>
+<td align="center"> 781</td>
+</tr>
+<tr class="table">
+<td align="center">5</td>	
+<td align="center">  Hashim Amla </td>
+<td align ="center"> South Aftica </td>
+<td align="center">776 </td>
+</tr>
+<tr>
+<td align="center">6</td>	
+<td align="center"> MS Dhoni </td>
+<td align ="center">India  </td>
+<td align="center">741 </td>
+</tr>
+<tr>
+<td align="center">7</td>	
+<td align="center"> Shikhar Dhawan</td>
+<td align ="center">India  </td>
+<td align="center"> 730</td>
+</tr>
+<tr>
+<td align="center">8</td>	
+<td align="center"> Ross Taylor </td>
+<td align ="center"> New Zealand </td>
+<td align="center">728 </td>
+</tr>
+<tr>
+<td align="center">9</td>	
+<td align="center"> Glenn Maxwell</td>
+<td align ="center">New Zealand </td>
+<td align="center">  717 </td>
+</tr>
+<tr>
+<td align="center">10</td>	
+<td align="center"> Quinton de Kock</td>
+<td align ="center">South Africa  </td>
+<td align="center">715 </td>
+</tr>
+</table>
+</br> 
+</br>
+<div id="cricdef" onclick="showbatrank();"style="text-align: center;"><b><a> ODI Batting Ranking</b></a></div>
+<div id="batrank">
+<ol>
+
+<li> Virat Kohli(India) - 899</li>
+<li> Rohit Sharma(India) - 871</li>
+<li>Joe Root(England)- 807</li>
+<li>David Warner (Australia)- 803</li>
+<li>Babar azam(Pakistan)- 798</li>
+<li>Ross Taylor(New zealand)- 785 </li>
+<li>Kane Willimson(New zealand)-778 </li>
+<li>Quinton de Kock(South Africa)- 769</li>
+</ol>
+</div>
+
+<div id="cricdef" onclick="showbowlrank();"style="text-align: center;"><b><a> ODI Bowling Ranking</b></a></div>
+<div id="bowlrank">
+
+<ol>
+
+<li> Imran Tahir (SA) - 743</li>
+<li> Trent Boult (NZ) - 729</li>
+<li>Jasprit Bumrah (India) - 728</li>
+<li>Josh Hazlewood (Australia) - 714</li>
+<li>Hasan Ali (Pakistan) - 711</li>
+<li>Kagiso Rabada (SA) - 708</li>
+<li>Mitchell Santner (NZ) - 662 </li>
+<li>Mitchell Starc (Australia) - 658</li>
+</ol>
+</div>
+<ol>
+
+<div id="cricdef" onclick="showallroundrank();" style="text-align: center;"><b> <a>ICC ODI All-round ranking</b></a></div>
+<div id="allroundrank">
+<ol>
+
+<li> Shakib Al Hasan (Bangladesh) - 359</li>
+<li> Mohammad Hafeez (Pakistan) - 339</li>
+<li>Mohammad Nabi (Afghanistan) - 316</li>
+<li>Angelo Mathews (Sri Lanka) - 306</li>
+<li>Chris Woakes (England) - 301</li>
+
+</ol>
+</div>
+
+<h4 align="center">
+	<div id="cricdef" style="font-size: 30px;"> <b> ODI Series</b></div>	</br></br>
+<h4>
+
+
+
+<div id="cricdef" onclick="showaus();"><b><a>India Squad</b></a></div>
+<div id="aus">
+<ol class="team">
+ 
+
+	
+<li>Virat kholi</li> 
+<li>Rohit sharma</li> 
+<li>Khaleed Ahmed</li> 
+<li>Yuzvendra chahal</li> 
+<li>Shikhar dhawan</li>
+<li>MS Dhoni</li> 
+<li>Ravindra jadeja</li>
+<li>Glenn Maxwell</li> 
+<li>Kuldeep yadav</li>
+<li>Mohammed shami</li> 
+<li>Manish pandey</li>
+<li>Rishab pant</li>
+<li>Andrew Tye</li>
+<li>Lokesh rahul</li>
+<li>Ambati rayudu</li>
+<li>Umesh yadav</li>
+
+</ol>
+</div>
+</br>
+
+<div id="cricdef" onclick="showeng();"><b><a>England squad</a></b></div>
+
+<div id="eng">
+<ol class="team">
+  <li>Eoin Morgan</li> 
+  <li>Sam Billings</li>
+  <li>Jos Buttler</li>
+  <li>Sam Curran</li>
+  <li>Tom Curran</li>
+  <li>Liam Dawson</li> 
+  <li>Alex Hales</li> 
+  <li>Chris Jordan</li>
+  <li>Dawid Malan</li>  
+  <li>Liam Plunkett</li>
+  <li>Adil Rashid</li>
+  <li>Jason Roy</li>
+  <li>Ben Stokes</li>
+  <li>James Vince </li>
+  <li>David Willey </li>
+  <li>Mark Wood</li>
+
+</ol>
+</div>
+<br>
+
+
+<div id="cricdef" onclick="shownz();"><b> <a>New Zealand squad</a> </b></div>
+<div id="nz">
+<ol>
+<li>Kane Williamson</li>
+<li>Tom Blundell</li>
+<li>Trent Boult</li>
+<li>Tom Bruce</li>
+<li>Colin de Grandhomme</li>
+<li>Martin Guptill</li>
+<li>Anaru Kitchen</li> 
+<li>Colin Munro</li>
+<li> Seth Rance</li> 
+<li>Mitchell Santner</li> 
+<li>Ish Sodhi</li>
+<li>Tim Southee</li>
+<li> Ross Taylor</li>
+<li>Ben Wheeler</li>
+</ol>
+</div>
+</p>
+</br>
+
+
+<div id="cricdef" style="background-color:#4CAF50; width:100%;margin-left: 0px;"> <b>Get to know more about :</b></div>
+<table align="center" id="tend" style="background-color:#4CAF50; column-span: 100%; width: 100%;">
+	<tr>
+
+<td  align="center"><a style="color: #000000; font-weight: normal; font-size: 15px; text-decoration: none;" href="webtech project.html#3">T20 Matches</a></td>
+<td  align="center" style="color: #ffffff;"><a style="color: #000000; font-weight: normal; font-size: 15px; text-decoration: none;" href="webtech project2.html#2">Test matches</a></td>
+</tr>
+</table>
+<script>
+
+		function shownz(){
+		var x = document.getElementById("nz");
+		if(x.style.display==="none"){
+			x.style.display="block";
+		}
+		else{
+			x.style.display = "none";
+		}
+	}
+
+	function showeng(){
+		var x = document.getElementById("eng");
+		if(x.style.display==="none"){
+			x.style.display="block";
+		}
+		else{
+			x.style.display = "none";
+		}
+	}
+	function showaus(){
+		var x = document.getElementById("aus");
+		if(x.style.display==="none"){
+			x.style.display="block";
+		}
+		else{
+			x.style.display = "none";
+		}
+	}
+	function showbowlrank(){
+		var x = document.getElementById("bowlrank");
+		if(x.style.display==="none"){
+			x.style.display="block";
+		}
+		else{
+			x.style.display = "none";
+		}
+	}
+
+	function showbatrank(){
+		var x = document.getElementById("batrank");
+		if(x.style.display==="none"){
+			x.style.display="block";
+		}
+		else{
+			x.style.display = "none";
+		}
+	}
+
+	function showallroundrank(){
+		var x = document.getElementById("allroundrank");
+		if(x.style.display==="none"){
+			x.style.display="block";
+		}
+		else{
+			x.style.display = "none";
+		}
+	}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+
+</html>
+
+
+

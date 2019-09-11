@@ -1,0 +1,142 @@
+<html>
+
+<style>
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul{
+  list-style: none;
+  margin: 0;
+  border-left:0;
+
+}
+
+.menu ul li{
+  padding: 50px;
+  position: relative;
+  width: 200px;
+  background-color: #34495E;
+  border-top: 1px solid #BDC3C7;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border-left:0;
+
+}
+
+
+.menu > ul >li{
+  border-right: 5px solid #F1C40F;
+}
+
+.menu ul li a{
+  color: #FFF;
+  text-decoration: none;
+
+}
+span:{
+  margin-right: 15px;
+}
+.menu ul ul{
+  transition: all 0.3s;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  left: 8 0%;
+  top: -2%;
+  border-left:5px solid #F1c40F;
+  left: 100%;
+}
+
+.menu ul li:hover{
+  background-color: #2ECC71;
+}
+
+.menu ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+
+
+}
+
+.body{
+  background-image: url("back.jpg");
+  position: fixed;
+  background-repeat: no-repeat;
+
+}
+
+.NBA{
+  content: url("NBA.png");
+}
+</style>
+<body class="body" id="a">
+  <img id="img" src="menu.jpg" onclick="menu();"  style="align:left; margin-top: none; margin-left: none;">
+
+
+
+ 
+<script>
+
+  function menu(){
+
+    if(document.querySelector('div')!=null){
+    var menu = document.getElementById('menu');
+    menu.remove();
+    return;
+    var docBody = document.getElementById('a');
+    //b.remove
+    var ul = document.querySelector('ul');
+
+    menu.removeChild(ul);
+    //document.body.removeChild(b);
+    return;
+    }
+    var a = document.createElement('div');
+    a.className="menu";
+    var list = document.createElement('ul');
+    var y1 = document.createElement("LI");
+    var t1 = document.createTextNode("Home");
+
+    y1.appendChild(t1);
+    list.appendChild(y1);
+     y1 = document.createElement("LI");
+     t1 = document.createTextNode("NBA");
+    y1.appendChild(t1);
+    list.appendChild(y1);
+     y1 = document.createElement("LI");
+     t1 = document.createTextNode("NFL");
+    y1.appendChild(t1);
+    list.appendChild(y1);
+
+     y1 = document.createElement("LI");
+     t1 = document.createTextNode("NHL");
+    y1.appendChild(t1);
+    list.appendChild(y1);
+     y1 = document.createElement("LI");
+     t1 = document.createTextNode("Soccer");
+    y1.appendChild(t1);
+    list.appendChild(y1);
+    a.appendChild(list);
+
+    document.body.appendChild(a);
+
+  }
+
+</script>
+
+    
+   
+
+  </div>
+  
+
+
+
+</body>
+</html>
