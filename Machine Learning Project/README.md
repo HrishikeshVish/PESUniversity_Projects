@@ -30,5 +30,7 @@ Collect and store HASH, create the validation dataframe
 Check the accuracy and ensure there's no overfitting
 
 Data Cleaning - Monday 8th Oct, 2019 (Done)
+
 Implementing the models - Oct 9, 2019 to Oct 20, 2019
+
 Test/Train - First week of November
