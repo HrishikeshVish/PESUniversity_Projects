@@ -25,8 +25,11 @@ Algorithms to be used
 Classify the dataframe
   - 20:80
   - 10:20:70 (Validation:test:train)
+  
 Train the data until the accuracy becomes greater than 0.95
+
 Collect and store HASH, create the validation dataframe
+
 Check the accuracy and ensure there's no overfitting
 
 Data Cleaning - Monday 8th Oct, 2019 (Done)
