@@ -9,8 +9,6 @@ e ectively categorize new exoplanet samples. Contributions are two-fold; elabora
 by using ML algorithms by stating the accuracy of each method used and propose a paradigm to automate the task
 of exoplanet classification for relevant outcomes. 
 
-Timeline
-
 
 Data Cleaning
   - Replace Missing Values
@@ -26,11 +24,10 @@ Classify the dataframe
   - 20:80
   - 10:20:70 (Validation:test:train)
   
-Train the data until the accuracy becomes greater than 0.95
+Train the data until the accuracy becomes greater than 0.95. Collect and store HASH, create the validation dataframe. Check the accuracy and ensure there's no overfitting. 
 
-Collect and store HASH, create the validation dataframe
 
-Check the accuracy and ensure there's no overfitting
+Timeline
 
 Data Cleaning - Monday 8th Oct, 2019 (Done)
 
