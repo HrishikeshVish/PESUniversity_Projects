@@ -9,7 +9,7 @@ e ectively categorize new exoplanet samples. Contributions are two-fold; elabora
 by using ML algorithms by stating the accuracy of each method used and propose a paradigm to automate the task
 of exoplanet classification for relevant outcomes. 
 
-Timeline
+Timeline\n
 Data Cleaning
   - Replace Missing Values
   - Remove Uncorrelated Data
