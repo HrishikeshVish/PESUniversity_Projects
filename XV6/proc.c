@@ -319,6 +319,7 @@ wait(void)
 //  - swtch to start running that process
 //  - eventually that process transfers control
 //      via swtch back to the scheduler.
+
 void
 scheduler(void)
 {
@@ -342,6 +343,7 @@ scheduler(void)
       c->proc = p;
       switchuvm(p);
       p->state = RUNNING;
+	p->priority = 10;
 
       swtch(&(c->scheduler), p->context);
       switchkvm();
@@ -559,7 +561,7 @@ static char *states[] = {
     cprintf("(");
     cprintf("%d, ", p->pid);
     cprintf("%s, ", state);
-    cprintf("%s)\n", p->name); 	
+    cprintf("%s, %d)\n", p->name, p->priority); 	
     //cprintf("(%d,%s,%s)\n", p->pid, state, p->name);
 
 
