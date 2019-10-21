@@ -60,11 +60,28 @@ Find a way of constructing an optimal BST of k such that the expectations of the
 
 
 Eat Cake Problem
+
 Wheatley is at the best party in the world: it has infinitely many cakes. Each cake is a square with an integer side length(in cm)
 . the party has inifnitely many cakes of every possible integer side length. the cakes all have the same depth. We only
 consider their areas. 
 	
 Wheatley is determined to eat one or more cakes that have a total combined area of exactly N cm. since he is health conscious, 
 he wants to eat as few cakes as possible. calculate the minimum number of cakes. 
+
+Permutation Game
+
+
+After a long day, Alice and Bob decided to play a little game. The game board consists of n cells in a straight line numbered from 1 to n. 
+
+Where each cell contains a number ai between 1 and n. Furthermore, no two cells can contain the same number. 
+
+A token is placed in one of the cells. They take alternating turns in moving the token around the board with Alice moving first. The current
+player can move from cell i to cell j only if the following conditions are satisfied.
+
+	1. the number on cell j is strictly greater than the number on cell i
+	2. the distance that the token travels must be a multiple of the number on the old cell (j-i mod ai =0)
+	
+Whoever is unable to make a move loses. For each possible starting point, determine who wins the game. Show that this is finite. 
+
 
 
