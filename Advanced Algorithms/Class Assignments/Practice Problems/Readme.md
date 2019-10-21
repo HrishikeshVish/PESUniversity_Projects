@@ -1,4 +1,6 @@
 October 21, 2019
+
+
 Knapsack problem
 given N items with weights w1, w2....wn, values v1, v2 ... vn and a knapsack of capacity w. Find the most valuable subset that 
 fits into the knapsack. 
@@ -12,23 +14,39 @@ fits into the knapsack.
 
 Implement and Compare the algorithms for finding the Binomial Coefficient
 1. Binomial_coeff(n, k, DP):
+
 	DP[i,0] and DP[i,i] are initialized to 1. everything is initialized to -1
+	
 	if(DP[n,k] == -1):
+	
 		DP[n,k] = BC(n-1, k, DP) + BC(n-1, k-1, DP);
+		
 	return DP[n,k]
 2. Binomial(n,k):
+
 	for i <- 0 to n:
+	
 		for j<- 0 to min(i,k):
+		
 			if(j == 0 or j == i) DP[i,j] <- 1
+			
 			else DP[i,j] = DP[i-1, j-1] + DP[i-1, j]
+			
 	return DP[n,k]
 3. Binomial(n, k):
+
 	if(n-k<k) k<- n-k
+	
 	for i<-0 to n:
+	
 		for j<- max(0, k-(n-i)) to min(i,k):
+		
 			if(j = 0 or j = i) DP[i mod 2, j] = 1
+			
 			else DP[i mod 2, j] <- DP[i-1mod 2, j] + DP[i-1 mod 2, j-1]
+			
 	return DP[n mod 2, k]
+	
 
 BST Problem
 
