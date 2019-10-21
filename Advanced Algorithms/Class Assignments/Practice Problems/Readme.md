@@ -31,6 +31,7 @@ Implement and Compare the algorithms for finding the Binomial Coefficient
 	return DP[n mod 2, k]
 
 BST Problem
+
 We are given a sequence k = <k1, k2, ..., kn> of n distinct keys in sorted order so that k1<k2 ... kn, and we wish to build a 
 BST from these keys. For each key ki, we have probability pi that a search will be for ki. Some searches may be for values not in
 K, and so we also have n+1 dummy keys. d0, d1...dn representing values not in K. d0 represents all values less than k1. dn represents
