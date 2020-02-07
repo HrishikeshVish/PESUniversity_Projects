@@ -1,0 +1,24 @@
+<script>
+	function Person(fname, lname){
+		this.fname = fname;
+		this.lname = lname;
+		this.sayName = function(){
+			console.log("Hello "+this.fname);
+			//return;
+		}
+		var arr = ["apple", "orange", true, 5];
+		//return arr;
+		//return this.fname;
+		//return 5;	
+	}
+	var person1 = new Person("VRG", "GOOB");//Constructor
+	var person2 = new Person; //Not an Error
+	console.log(person1);
+	console.log(person2);
+	console.log(person1.sayName());
+	console.log(person2.sayName());
+	var p3 = Person("Me", "U"); //FUnction
+	console.log(p3);
+	console.log(Person);
+
+</script>

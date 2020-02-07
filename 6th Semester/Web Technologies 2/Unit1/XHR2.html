@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			
+			var obj = {
+
+				xhr:new XMLHttpRequest(),
+				retrieve:function(e){
+					var history1 = e.state;
+					document.getElementById("atname").value = history1.name;
+					document.getElementById("spname").value = history1.sport;
+					document.getElementById("country").value = history1.country;
+				},
+				getData: function(){
+
+					var athlete = document.getElementById("atname").value;
+					//this.xhr.open("GET", "random.php?atname="+athlete, true);
+					this.xhr.open("POST", "random.php", true);
+					
+					this.xhr.onreadystatechange = this.showData;
+					//this.xhr.send();// GET MEthod
+					this.xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+					this.xhr.send("atname="+athlete);
+
+				},
+				showData:function(){
+					
+					if(this.readyState==4 && this.status==200){
+						
+						
+						var json=JSON.parse(this.responseText)
+						
+						json.name = document.getElementById("atname").value;
+						document.getElementById("spname").value = json.sport;
+						document.getElementById("country").value = json.country;
+						history.pushState(json, "sports", "XHR2.html");
+					}
+					}
+
+			}
+			window.onpopstate = obj.retrieve; //triggered by hitting back button
+
+		</script>
+	</head>
+
+	<body>
+		<input placeholder="Player Name" type='text' name='atname'id='atname' onblur="obj.getData()">
+		<input placeholder="Sports"type="text" name='spname'id="spname" readonly>
+		<input placeholder="Country"type="text" name='country'id = "country" readonly>
+
+
+	</body>
+</html>

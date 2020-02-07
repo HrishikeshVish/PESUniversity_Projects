@@ -1,0 +1,46 @@
+<script>
+function Rectangle(length, breadth){
+	//if(length == breadth){
+	//	var sq2 = new Square(length);
+	//	return sq2;
+	//}
+	this.length = length;
+	this.breadth = breadth;
+}
+Rectangle.prototype.getArea = function(){
+
+	
+	var area = this.length *this.breadth;
+	return "Area is "+area;
+
+}
+Rectangle.prototype.toString=function(){
+	return "Rectangle: "+this.length+" x "+this.breadth;
+}
+function Square(size){
+	//this.length=size;
+	//this.breadth=size;
+	//Call a rectangle function with a square
+	Rectangle.call(this,size,size); // Calls the super class's constructor to initialize the object.Constructor stealing.
+
+}
+Square.prototype = new Rectangle();
+Square.prototype.constructor=Square; // Constructor of a prototype must always point to it's object not some other object. 
+Square.prototype.toString=function(){
+	return "Square: "+this.length;
+}
+var t1 = new Rectangle(4,5);
+var t2 = new Rectangle(5,7);
+var t3 = new Rectangle(6,6);
+var sq = new Square(5);
+console.log(t3);
+console.log(t1);
+console.log(t2);
+console.log(sq);
+console.log(sq.toString());//Rectangle 5x5 if square.prototype.toString is not defined
+console.log(t1.toString());
+console.log(sq.getArea());
+console.log(t1.getArea());
+console.log(t2.getArea());
+
+</script>

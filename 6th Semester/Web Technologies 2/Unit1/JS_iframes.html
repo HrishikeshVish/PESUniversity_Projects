@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		input{
+			padding:10px;
+			margin-top: 80px;
+		}
+		iframe{
+			display: none;
+			padding: 10px;
+
+		}
+	</style>
+	<script>
+		//Hidden Frame Technique
+		// Frame has its own history. pressing the back button will change the contents of the frame
+		// Hidden frames is an AJAX technique
+		var obj={
+			hf:document.getElementById("hf"),
+			getDetails:function(){
+				var hf2 = document.getElementById("hf");
+				var ip=document.getElementById("srn").value;
+				hf2.src="http://localhost/WT2/Unit 1/iframes_details.php?srn="+ip;
+			},
+			updateDetails:function(res){
+				var arr = res.split(" ");
+				document.getElementById("name").value = arr[0].split(":")[1];
+				document.getElementById("gpa").value = arr[1].split(":")[1];
+				//var name = document.getElementById("name");
+				
+			}
+	}
+	</script>
+	<body>
+		<img src="JS_iframes.html">
+		<form align="center">
+			<input placeholder="srn" type="text" id="srn" onblur="obj.getDetails()"/><br><br>
+			<input placeholder="name" type="text" id="name"/><br><br>
+			<input placeholder="gpa" type="text" id="gpa"/><br><br>
+			<iframe id="hf"></iframe>
+
+
+		</form>
+
+	</body>
+</html>

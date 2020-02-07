@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		input{
+			align-self: center;
+			padding:10px;
+			margin-top: 80px;
+		}
+		iframe{
+			display: none;
+			padding: 10px;
+
+		}
+	</style>
+		<script>
+			var obj={
+				success:function(){
+					if(im.height==1){
+						document.getElementById("message").innerHTML="User Name Available";
+					}
+					else{
+						document.getElementById("message").innerHTML="Invalid User Name";
+					}
+				},
+				fail:function(){
+					document.getElementById("message").innerHTML = "Connection Lost";
+				},
+				chkuser:function(){
+					im = document.createElement("img");
+					var ip = document.getElementById('name').value;
+					im.src="http://localhost/WT2/Unit 1/Authenticate.php?name="+ip;
+					im.onload = this.success;
+					im.onerror = this.fail;
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type = "text" id = "name" placeholder="name" onblur="obj.chkuser()"> <br/>
+		<div id="message"></div>
+		<input type = "text" id = "password" placeholder="password" > <br/>
+		<input type = "text" id = "confirm" placeholder="confirm Password" > <br/>
+
+	</body>
+
+</html>

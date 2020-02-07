@@ -1,0 +1,17 @@
+<script>
+	Person.prototype.sayName = function(){
+		console.log("You Are");
+	}
+
+	function sayMorning(){
+		console.log("Good Morning");
+	}
+	var person1 = new Person("abc", "def");
+	person1.sayName();
+	function sayMorning(){
+		console.log("Good Morning");
+	}
+	sayMorning.call(person1);
+	sayMorning.apply(obj, array_of_parameters);
+
+</script>

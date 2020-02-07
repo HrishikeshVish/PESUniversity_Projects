@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script>
+			var obj={
+				xhr: new XMLHttpRequest(),
+				getVideo: function(){
+					this.xhr.responseType="blob";
+					this.xhr.open("GET", "loadvid.php", true);
+					alert("Hello");
+					this.xhr.onreadystatechange = this.showVideo;
+					this.xhr.send();	
+				},
+				showVideo: function(){
+					
+					if(this.readyState==4 && this.status==200){
+						var vid = document.createElement("video");
+						var img = document.createElement("img");
+						//vid.src = URL.createObjectURL(this.response);
+						img.src = URL.createObjectURL(this.response);
+						//vid.controls=true;
+						document.body.appendChild(img);
+					}	
+
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="obj.getVideo()">Get Video</button>
+	</body>
+</html>

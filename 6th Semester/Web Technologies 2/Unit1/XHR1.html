@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var obj={
+				xhr: new XMLHttpRequest(),
+				getData: function(){
+					this.xhr.open("GET", "Authenticate.php", true);
+					this.xhr.onreadystatechange = this.showData;
+					this.xhr.send();	
+				},
+				showData: function(){
+					console.log(this);
+					if(this.readyState==4 && this.status==200){
+						alert(this.responseText);
+						
+					}
+
+				}
+
+			}
+		</script>
+	</head>
+
+	<body>
+		<button onclick="obj.getData()">Click</button>
+	</body>
+</html>
