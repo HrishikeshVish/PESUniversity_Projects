@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+			#scoreboard{
+				margin-top:100px;
+				margin-left:59px;
+			}
+			.score{
+
+				border-style: solid;
+				padding:20px;
+				font-size: 20pt;
+				font-weight: bold;
+				font-family: verdana;
+				display:inline;
+			}
+		</style>
+		<script>
+			function init(){
+				obj = new scores();
+				
+				c = setInterval(obj.getScores, 2000);
+				//obj.getScores();
+				
+			}
+			function scores(){
+				this.getScores =function(){
+					xhr = new XMLHttpRequest();
+					xhr.open("POST", "getscores.php", true);
+					xhr.onreadystatechange = function(){
+						if(xhr.readyState==4 && xhr.status==200){
+						obj.showScores();
+						}
+					}
+					xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+					xhr.send();
+
+				}
+				this.showScores = function(){
+					
+						var json=xhr.responseText.split(" ");
+						
+
+						
+						
+						document.getElementById("score1").innerHTML = json[0];
+						document.getElementById("score2").innerHTML = json[1];
+						document.getElementById("score3").innerHTML = json[2];
+						
+
+					
+				}
+			}
+		</script>
+	</head>
+
+	<body onload="init()">
+		<div id="scoreboard">
+			<div id="score1" class="score" >100</div>
+			<div id="score2" class="score">200</div>
+			<div id="score3" class="score">300</div>
+
+		</div>
+
+	</body>
+
+</html>
