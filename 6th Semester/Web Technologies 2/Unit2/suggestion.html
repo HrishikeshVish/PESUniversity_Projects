@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#container{
+				display:none;
+				border-top: none;
+				border-bottom: solid 1px gray;
+				width:500px;
+				padding:10px;
+				margin-left:400px;
+				align-self:center;
+			}
+			#search{
+				padding:10px;
+				width: 500px;
+				border-radius:25px;
+				border: solid 0.5px gray;
+				margin-left: 400px;
+				
+				align-self: center;
+
+			}
+			.itemdiv:hover{
+				background-color:gray;
+			}
+			.itemdiv{
+				background-color: white;
+				border: 1px solid black;
+				
+			}
+			#search2{
+				
+				width: 350px;
+				align-self: center;
+				border: none;
+				padding: 5px;
+				margin-left: 470px;
+				margin-top:150px;
+				align-self: center;
+
+			}
+		</style>
+		<script>
+			function Suggest(){
+				this.xhr = new XMLHttpRequest()
+				tempObj = this;
+				this.search=null;
+				this.timer=null;
+				this.getTerm = function(){
+					if(tempObj.timer){
+						clearTimeout(tempObj.timer);
+					}
+					tempObj.timer = setTimeout(tempObj.sendTerm, 500);
+				}
+				this.sendTerm = function(){
+
+					
+					tempObj.search = document.getElementById("search")
+					if(localStorage.getItem(tempObj.search.value!="")){
+						tempObj.populateFood(localStorage.getItem(tempObj.search.value));
+					}
+					else{
+					tempObj.xhr.onreadystatechange = tempObj.displayRequests;
+					tempObj.xhr.open("GET", "suggest.php?term="+tempObj.search.value, true);
+					
+					tempObj.xhr.send();
+				}
+
+				}
+				this.displayRequests = function(){
+					console.log(tempObj.xhr.readyState);
+					console.log(tempObj.xhr.status);
+					if(this.readyState ==4 && tempObj.xhr.status ==200){
+						
+						var res = this.responseText;
+						var resJson = JSON.parse(res);
+						if(resJson.length==0){
+								tempObj.search.value = "No Results found";
+								tempObj.search.style.backgroundColor="red";
+						}	
+						else{
+							var container = document.getElementById("container");
+							container.innerHTML = "";
+							tempObj.search.style.backgroundColor="white";
+							tempObj.populateFood(resJson);
+							localStorage.setItem(tempObj.search.value, resJson);
+							
+						}				
+				}
+			}
+			this.populateFood=function(items){
+				var container = document.getElementById('container');
+				container.innerHTML ="";
+				for(var i=0;i<items.length;i++){
+					var itemdiv = document.createElement('div');
+					itemdiv.innerHTML = items[i];
+					itemdiv.id="tex";
+					itemdiv.style.padding="10";
+					container.appendChild(itemdiv);	
+				}
+				container.style.display="block";
+				container.style.borderBottom="gray";
+			}
+
+			}
+			var obj = new Suggest();
+			function remove(){
+				var cont = document.getElementById("container");
+				cont.innerHTML = "";
+				cont.style.borderBottom="none";
+
+			}
+		</script>
+	</head>
+	<body>
+		<div id="full">
+		<img src="logo.jpg" width="200px" id="search2"><br>
+		<input type = "text" id="search" onkeypress="obj.getTerm()" onblur="remove()">
+		<div id="container"></div>
+	</div>
+	</body>
+</html>
