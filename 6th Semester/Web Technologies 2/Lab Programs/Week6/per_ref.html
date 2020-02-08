@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+			#scoreboard{
+				margin-top:100px;
+				margin-left:59px;
+			}
+			.score{
+
+				border-style: solid;
+				padding:20px;
+				font-size: 20pt;
+				font-weight: bold;
+				font-family: verdana;
+				display:inline;
+			}
+		</style>
+		<script>
+			function init(){
+				obj = new scores();
+				timeout =2000;
+				c = setInterval(obj.getScores, 2000);
+				//obj.getScores();
+				
+			}
+			function scores(){
+				this.getScores =function(){
+					xhr = new XMLHttpRequest();
+					xhr.open("POST", "getscores.php", true);
+					xhr.onreadystatechange = function(){
+						if(xhr.readyState==4 && xhr.status==200){
+						obj.showScores();
+						}
+					}
+					xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+					xhr.send();
+
+				}
+				this.showScores = function(){
+					
+						var json=xhr.responseText.split(" ");
+						
+
+						
+						
+						document.getElementById("cse").innerHTML = json[0];
+						document.getElementById("ece").innerHTML = json[1];
+						document.getElementById("me").innerHTML = json[2];
+						document.getElementById("bt").innerHTML = json[3];
+						
+
+					
+				}
+			}
+			function update(){
+				xhr2 = new XMLHttpRequest();
+				xhr2.timeout = timeout;
+				xhr2.ontimeout = ()=>{
+					timeout = Math.pow(timeout,2);
+				}
+				var branch = document.getElementById("br").value;
+				xhr2.open("GET", "updatescore.php?branch="+branch, true);
+				this.xhr2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+				this.xhr2.send();
+				
+			
+			}
+		</script>
+	</head>
+
+	<body onload="init()">
+		<div id="scoreboard">
+			
+			<div id="cse" class="score" >20</div>
+			<div id="ece" class="score">25</div>
+			<div id="me" class="score">30</div>
+			<div id="bt" class="score">35</div> <br><br><br><br><br>
+			<h4> Select a branch</h4>
+			<select name="branch" id="br">
+				<option>CSE</option>
+				<option>ECE</option>
+				<option>ME</option>
+				<option>BT</option>
+			</select>
+			<input type="submit" value="submit" onclick="update()">
+
+		</div>
+		
+
+		
+		
+
+	</body>
+
+</html>
