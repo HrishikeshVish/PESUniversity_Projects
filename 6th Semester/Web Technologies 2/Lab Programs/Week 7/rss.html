@@ -1,0 +1,183 @@
+<html>
+	<head>
+		<script>
+
+			var obj = {
+				readmore: function(e){
+					e.target.style.display = "none";
+					e.target.previousElementSibling.style.display = "inline";
+					
+				},
+				xhr:new XMLHttpRequest,
+				loadfeed:function(){
+					
+					this.xhr.open("GET", "loadfeed.php", true);
+					
+					this.xhr.onreadystatechange = this.showFeed;
+					
+					this.xhr.send();
+					
+					
+				},
+				showFeed: function(){
+					
+					if(this.readyState==4 && this.status==200){
+						
+						var out = this.responseXML.documentElement;
+						
+						var title = out.getElementsByTagName("title")[0].firstChild.nodeValue;
+						var link = out.getElementsByTagName("link")[0].firstChild.nodeValue;
+						var h1 = document.createElement("h1");
+						h1.innerHTML = title;
+						var h2 = document.createElement("h2");
+						h2.innerHTML = link;
+						document.body.appendChild(h1);
+						document.body.appendChild(h2);
+						console.log(title);
+						console.log(link);
+						var feeds = out.getElementsByTagName("item");
+						var f1 = feeds[0].children;
+						var f2 = feeds[1].children;
+						var f3 = feeds[2].children;
+						var f4 = feeds[3].children;
+						var f5 = feeds[4].children;
+
+						var t1 = document.createElement("a");
+						t1.href = f1[1].innerHTML;
+						t1.innerHTML = f1[0].innerHTML;
+						document.body.appendChild(t1);
+						var des = document.createElement('p');
+						var text = f1[12].innerHTML;
+						if(text.length>200){
+							des.innerHTML = text.substring(0,200) + "<span id='more' style='display:none;'>" + text.substring(200,)+"</span>"+ "... <a href='#' onclick='obj.readmore(event);'> Read More </a>";
+							
+							
+
+							document.body.appendChild(des);
+
+							
+							
+							
+						}
+						else{
+						des.innerHTML = f1[12].innerHTML;
+						document.body.appendChild(des);
+						}
+						
+						
+						var t1 = document.createElement("a");
+						t1.href = f2[1].innerHTML;
+						t1.innerHTML = f2[0].innerHTML;
+						document.body.appendChild(t1);
+						var des = document.createElement('p');
+						var text = f2[10].innerHTML;
+						if(text.length>200){
+							des.innerHTML = text.substring(0,200) + "<span id='more' style='display:none;'>" + text.substring(200,)+"</span>"+ "... <a href='#' onclick='obj.readmore(event);'> Read More </a>";
+							
+							
+
+							document.body.appendChild(des);
+
+							
+							
+							
+						}
+						else{
+						des.innerHTML = f2[10].innerHTML;
+						document.body.appendChild(des);
+						}
+
+
+						
+						var t1 = document.createElement("a");
+						t1.href = f3[1].innerHTML;
+						t1.innerHTML = f3[0].innerHTML;
+						document.body.appendChild(t1);
+						var des = document.createElement('p');
+
+						var text = f3[9].innerHTML;
+						if(text.length>200){
+							des.innerHTML = text.substring(0,200) + "<span id='more' style='display:none;'>" + text.substring(200,)+"</span>"+ "... <a href='#' onclick='obj.readmore(event);'> Read More </a>";
+							
+							
+
+							document.body.appendChild(des);
+
+							
+							
+							
+						}
+						else{
+						des.innerHTML = f3[9].innerHTML;
+						document.body.appendChild(des);
+						}
+
+
+						
+						var t1 = document.createElement("a");
+						t1.href = f4[1].innerHTML;
+						t1.innerHTML = f4[0].innerHTML;
+						document.body.appendChild(t1);
+						var des = document.createElement('p');
+						var text = f4[10].innerHTML;
+						if(text.length>200){
+							des.innerHTML = text.substring(0,200) + "<span id='more' style='display:none;'>" + text.substring(200,)+"</span>"+ "... <a href='#' onclick='obj.readmore(event);'> Read More </a>";
+							
+							
+
+							document.body.appendChild(des);
+
+							
+							
+							
+						}
+						else{
+						des.innerHTML = f4[10].innerHTML;
+						document.body.appendChild(des);
+						}
+
+
+						
+						var t1 = document.createElement("a");
+						t1.href = f5[1].innerHTML;
+						t1.innerHTML = f5[0].innerHTML;
+						document.body.appendChild(t1);
+
+						var des = document.createElement('p');
+
+
+						var text = f5[11].innerHTML;
+						if(text.length>200){
+							des.innerHTML = text.substring(0,200) + "<span id='more' style='display:none;'>" + text.substring(200,)+"</span>"+ "... <a href='#' onclick='obj.readmore(event);'> Read More </a>";
+							
+							
+
+							document.body.appendChild(des);
+
+							
+							
+							
+						}
+						else{
+						des.innerHTML = f5[11].innerHTML;
+						document.body.appendChild(des);
+						}
+
+
+
+						
+						
+						
+						
+					}
+				
+				}
+
+
+			}
+		</script>
+	</head>
+	<body onload="obj.loadfeed();">
+		
+	</body>
+</html>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+<channel>
+	<title>Variety Festival News</title>
+	<link>https://variety.com</link>
+	<description />
+	<lastBuildDate>Mon, 17 Feb 2020 03:42:47 +0000</lastBuildDate>
+	<language>en</language>
+	<ttl>2</ttl>
+	<generator>http://wordpress.com/</generator>
+
+<image>
+	<url>https://pmcvariety.files.wordpress.com/2018/06/variety-favicon.png?w=32</url>
+	<title>Variety</title>
+	<link>https://variety.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<cloud domain="variety.com" port="80" path="/?rsscloud=notify" registerProcedure="" protocol="http-post" />
+<atom:link rel="search" type="application/opensearchdescription+xml" href="https://variety.com/osd.xml" title="Variety" />
+	
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/VarietyFestivalNews" /><feedburner:info xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" uri="varietyfestivalnews" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://variety.com/?pushpress=hub" />
+	
+		<item>
+		<title>Chaka Khan Joins Fergie in Pantheon of Memorable NBA National Anthem Performances</title>
+		<link>https://variety.com/2020/music/news/chaka-khan-nba-all-star-game-fergie-roseanne-national-anthem-star-spangled-1203505553/</link>
+					<comments>https://variety.com/2020/music/news/chaka-khan-nba-all-star-game-fergie-roseanne-national-anthem-star-spangled-1203505553/#respond</comments>
+		
+		<dc:creator>chrislwillman</dc:creator>
+		<pubDate>Mon, 17 Feb 2020 03:42:47 +0000</pubDate>
+				<category>News</category>
+		<category>Chaka Khan</category>
+		<category>Fergie</category>
+		<category>Magic Johnson</category>
+		<category>national anthem</category>
+		<category>NBA All-Star Game</category>
+		<guid isPermaLink="false">http://variety.com/?p=1203505553</guid>
+
+					<description>It takes a lot to make a performance of "The Star Spangled Banner" before the NBA All-Star Game trend higher on social media than the game itself, but Chaka Khan has managed what Fergie was able to two years ago, with a unique rendering of the National Anthem that threatened to render anything that followed </description>
+		
+					<wfw:commentRss>https://variety.com/2020/music/news/chaka-khan-nba-all-star-game-fergie-roseanne-national-anthem-star-spangled-1203505553/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:thumbnail url="https://pmcvariety.files.wordpress.com/2020/02/shutterstock_editorial_10552578hl-e1581908463819.jpg" />
+		<media:content url="https://pmcvariety.files.wordpress.com/2020/02/shutterstock_editorial_10552578hl-e1581908463819.jpg" medium="image">
+			<media:title type="html">92nd Academy Awards - Vanity Fair Oscar Party, Beverly Hills, USA - 09 Feb 2020</media:title>
+		</media:content>
+
+		<media:content url="https://2.gravatar.com/avatar/8e99b4f9b76a13b4f6cfea43513202f9?s=96&amp;d=https%3A%2F%2F2.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=PG" medium="image">
+			<media:title type="html">chrislwillman</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Wiz Khalifa Surprises L.A. Middle School Students With Musical Instrument Donation</title>
+		<link>https://variety.com/2020/music/news/wiz-khalifa-eliot-arts-magnet-academy-music-instrument-donation-1203504858/</link>
+					<comments>https://variety.com/2020/music/news/wiz-khalifa-eliot-arts-magnet-academy-music-instrument-donation-1203504858/#respond</comments>
+		
+		<dc:creator>bbell96</dc:creator>
+		<pubDate>Sun, 16 Feb 2020 22:56:42 +0000</pubDate>
+				<category>News</category>
+		<category>Eliot Arts Magnet Academy</category>
+		<category>Little Kids Rock</category>
+		<category>Wiz Khalifa</category>
+		<guid isPermaLink="false">http://variety.com/?p=1203504858</guid>
+
+					<description>Rapper Wiz Khalifa surprised a group of students at Los Angeles' Eliot Arts Magnet Academy on Feb. 13 with a donation of musical instruments. The Grammy-nominated artist partnered with national music education nonprofit Little Kids Rock for the reveal. Little Kids Rock's mission is to bring inclusive and culturally relevant music education programs to schools </description>
+		
+					<wfw:commentRss>https://variety.com/2020/music/news/wiz-khalifa-eliot-arts-magnet-academy-music-instrument-donation-1203504858/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		
+		<media:thumbnail url="https://pmcvariety.files.wordpress.com/2020/02/wiz_khalifa_.jpg" />
+		<media:content url="https://pmcvariety.files.wordpress.com/2020/02/wiz_khalifa_.jpg" medium="image">
+			<media:title type="html">Wiz Khalifa &amp; National Non-profit Little Kids Rock Partner To Bring Music Education To Public School Students</media:title>
+		</media:content>
+
+		<media:content url="https://1.gravatar.com/avatar/146d54a91eb278b1a0cc24de71dbe8c9?s=96&amp;d=https%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=PG" medium="image">
+			<media:title type="html">bbell96</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>TobyMac Shares Emotional Tribute to Late Son at L.A. Forum Concert (Watch)</title>
+		<link>https://variety.com/2020/music/news/tobymac-tribute-son-forum-concert-1203505429/</link>
+					<comments>https://variety.com/2020/music/news/tobymac-tribute-son-forum-concert-1203505429/#comments</comments>
+		
+		<dc:creator>chrislwillman</dc:creator>
+		<pubDate>Sun, 16 Feb 2020 20:39:50 +0000</pubDate>
+				<category>News</category>
+		<category>Toby Mac</category>
+		<category>TobyMac</category>
+		<guid isPermaLink="false">http://variety.com/?p=1203505429</guid>
+
+					<description>TobyMac was not about to make anyone wait for him to address the elephant in the room as he started his set Saturday night at L.A.'s Forum. Ten concerts deep into his "Hits Deep" arena tour, the Christian singer-rapper was clearly aware that fans want to hear him speak sooner rather than later about the </description>
+		
+					<wfw:commentRss>https://variety.com/2020/music/news/tobymac-tribute-son-forum-concert-1203505429/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		
+		<media:thumbnail url="https://pmcvariety.files.wordpress.com/2020/02/shutterstock_editorial_10445244b-e1581881125960.jpg" />
+		<media:content url="https://pmcvariety.files.wordpress.com/2020/02/shutterstock_editorial_10445244b-e1581881125960.jpg" medium="image">
+			<media:title type="html">Music Dove Awards, Nashville, USA - 15 Oct 2019</media:title>
+		</media:content>
+
+		<media:content url="https://2.gravatar.com/avatar/8e99b4f9b76a13b4f6cfea43513202f9?s=96&amp;d=https%3A%2F%2F2.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=PG" medium="image">
+			<media:title type="html">chrislwillman</media:title>
+		</media:content>
+
+		<media:content url="https://pmcvariety.files.wordpress.com/2020/02/p1150889-e1581885125748.jpg" medium="image" />
+
+		<media:content url="https://pmcvariety.files.wordpress.com/2020/02/peacesign-e1581885272846.jpg" medium="image" />
+	</item>
+		<item>
+		<title>Queen Latifah, Jennifer Hudson Give Kobe Tributes at NBA All-Star Game</title>
+		<link>https://variety.com/2020/music/news/kobe-bryant-nba-all-star-game-jennifer-hudson-queen-latifah-1203505450/</link>
+					<comments>https://variety.com/2020/music/news/kobe-bryant-nba-all-star-game-jennifer-hudson-queen-latifah-1203505450/#comments</comments>
+		
+		<dc:creator>Jordan Moreau</dc:creator>
+		<pubDate>Sun, 16 Feb 2020 20:25:03 +0000</pubDate>
+				<category>News</category>
+		<category>Jennifer Hudson</category>
+		<category>Kobe Bryant</category>
+		<category>Queen Latifah</category>
+		<guid isPermaLink="false">http://variety.com/?p=1203505450</guid>
+
+					<description>Grammy-winning singers Queen Latifah and Jennifer Hudson paid homage to the late Kobe Bryant while singing at the NBA All-Star Weekend in Chicago on Sunday. First, Latifah performed Stevie Wonder's inspirational ballad "Love's In Need of Love Today" and changed some of the lyrics in honor of Bryant, who died in a shocking helicopter crash</description>
+		
+					<wfw:commentRss>https://variety.com/2020/music/news/kobe-bryant-nba-all-star-game-jennifer-hudson-queen-latifah-1203505450/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		
+		<media:thumbnail url="https://pmcvariety.files.wordpress.com/2020/01/kobe-bryant-dead-7.jpg" />
+		<media:content url="https://pmcvariety.files.wordpress.com/2020/01/kobe-bryant-dead-7.jpg" medium="image">
+			<media:title type="html">Kobe Bryant Dead</media:title>
+		</media:content>
+
+		<media:content url="https://2.gravatar.com/avatar/e52d67ff871e62c4a49bed83c58c20f3?s=96&amp;d=https%3A%2F%2F2.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=PG" medium="image">
+			<media:title type="html">jordanmoreau01</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>‘Parasite’ Enjoys Record Box Office Boost After Oscar Wins</title>
+		<link>https://variety.com/2020/film/box-office/parasite-oscar-box-office-1203505355/</link>
+					<comments>https://variety.com/2020/film/box-office/parasite-oscar-box-office-1203505355/#comments</comments>
+		
+		<dc:creator>Rebecca Rubin</dc:creator>
+		<pubDate>Sun, 16 Feb 2020 18:15:07 +0000</pubDate>
+				<category>Box Office</category>
+		<category>News</category>
+		<category>Bong Joon-ho</category>
+		<category>Oscars</category>
+		<category>Parasite</category>
+		<guid isPermaLink="false">http://variety.com/?p=1203505355</guid>
+
+					<description>Bong Joon Ho's "Parasite" is reaping box office riches after its groundbreaking Oscar best picture win. The twisted South Korean thriller collected $5.5 million over the weekend, an exceptional 234% increase in ticket sales and the biggest post-Oscar boost for a best picture winner in the past decade. In the seven days since the Academy</description>
+		
+					<wfw:commentRss>https://variety.com/2020/film/box-office/parasite-oscar-box-office-1203505355/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		
+		<media:thumbnail url="https://pmcvariety.files.wordpress.com/2020/01/parasite-movie.jpg" />
+		<media:content url="https://pmcvariety.files.wordpress.com/2020/01/parasite-movie.jpg" medium="image">
+			<media:title type="html">Parasite Movie</media:title>
+		</media:content>
+
+		<media:content url="https://2.gravatar.com/avatar/ee177fdec2b13f83dcde029f5efa0703?s=96&amp;d=https%3A%2F%2F2.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=PG" medium="image">
+			<media:title type="html">rrubin6</media:title>
+		</media:content>
+	</item>
+	</channel>
+</rss>
