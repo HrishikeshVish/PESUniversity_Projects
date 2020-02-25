@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<style>
+		</style>
+		<script>
+			strlen = 0;
+			var obj={
+				xhr: new XMLHttpRequest(),
+				monitor:function(){
+					
+					this.xhr.open("POST", "str_c.php", true);
+					
+					this.xhr.onreadystatechange=this.updateDiv;
+					
+					this.xhr.send();
+					
+
+				},
+				updateDiv:function(){
+					
+					if(this.readyState==3 && this.status==200){
+						if(this.responseText.indexOf("Fatal")>-1){
+							obj.monitor();
+						}
+						else{
+							var div = document.createElement("div");
+							div.innerHTML = this.responseText.slice(strlen);
+							document.body.appendChild(div);
+							strlen = this.responseText.length;
+							console.log(this.responseText);
+						}
+					}
+					else if(this.readyState==4 && this.status==200){
+						
+						console.log(this.responseText);
+					}
+				}
+
+			}
+		</script>
+	</head>
+	<body onload="obj.monitor()">
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			timer = null;
+			obj={
+				monitor:function(){
+					document.getElementById('hf').src = "c_fr.php";
+
+				},
+				updateDiv:function(res){
+					div = document.createElement("div");
+					div.innerHTML = res;
+					document.body.appendChild(div);
+				},
+				heartbeat:function(){
+					if(timer){
+						clearTimeout(timer);
+					}
+					timer = setTimeout(obj.monitor, 10000);
+				}
+			}
+		</script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<iframe id="hf" height="0" width="0"></iframe>
+		<button onclick="obj.monitor();">Click to Monitor</button>
+	</body>
+</html>
