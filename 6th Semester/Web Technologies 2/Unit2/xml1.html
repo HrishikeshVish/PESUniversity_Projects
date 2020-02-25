@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script>
+			var obj={
+				xhr:new XMLHttpRequest(),
+				loadxml:function(){
+					this.xhr.open("POST", "feed.php", true);
+					this.xhr.onreadystatechange = this.showxml;
+					//this.xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+					this.xhr.send();
+				},
+				showxml:function(){
+					if(this.readyState == 4 && this.status==200){
+						console.log(this.response);
+						root = this.responseXML.documentElement;
+						console.log(root);
+						name = root.getElementsByTagName("item");
+						console.log(name[0]);
+						var title = name[0].getElementsByTagName("title")[0].firstChild.nodeValue;
+						var link = name[0].getElementsByTagName("link")[0].firstChild.nodeValue;
+						console.log(title);
+					}
+				}
+
+			}
+		</script>
+	</head>
+	<input type="submit" value="GET XML" onclick="obj.loadxml();">
+</html>
