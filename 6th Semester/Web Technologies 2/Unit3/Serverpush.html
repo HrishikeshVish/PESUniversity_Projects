@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		</style>
+		<script>
+			var obj={
+				monitor:function(){
+					var evs = new EventSource("sse_c.php");
+					evs.addEventListener("message", obj.showData, false);
+					evs.addEventListener("open", obj.onOpen, false);
+					evs.addEventListener("error", obj.onError, false);
+					evs.addEventListener("close", obj.onClose, false);
+				},
+				showData:function(e){
+					var div = document.createElement("div");
+					console.log(e.data);
+					div.innerHTML = e.data;
+					document.body.appendChild(div);
+				},
+				onOpen:function(){
+					console.log("sse.open");
+				},
+				onError:function(){
+					console.log("Error");
+				},
+				onClose:function(e){
+					evs.close();
+					console.log(e.data);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="obj.monitor()">CLICK TO DOWNLOAD VIRUS </button>
+	</body>
+</html>

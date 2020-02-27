@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script>
+			websocket = new websocket("URL TO php file");
+			websocket.onopen = function(ev){
+				alert("Connected to the server");
+			}
+			websocket.onclose = function(ev){
+				alert("Connection Terminated");
+			}
+			websocket.onmessage = function(ev){
+				alert(ev.data);
+			}
+			websocket.onerror = function(ev){
+				alert("Error Encountered");
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
