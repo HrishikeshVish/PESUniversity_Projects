@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<style>
+			#Select{
+				padding: 2px;
+				background-color: #fff;
+				width: 100px;
+				border-radius: 2px;
+			}
+		</style>
+		<script>
+			var u1t = 0;
+			var u2t = 0;
+			
+			obj = {
+				xhr:new XMLHttpRequest(),
+				addmessage:function(){
+
+					var selop = document.getElementById("Select").value;
+					var message = document.getElementById("in").value;
+				    var ta = document.getElementById('ta');
+					ta.innerHTML+="\n"+selop+":"+message;
+					this.xhr.open("GET", "serv1.php?user="+selop+"&message="+message, true);
+					this.xhr.send();
+					var out1 = selop.localeCompare("User1");
+					if(out1 == 0){
+						var time = u1t;
+					}
+					else{
+						var time = u2t;
+					}
+					var evs = new EventSource("read.php?user="+selop+"&message="+message+"&time="+time);
+					evs.addEventListener("message", obj.showData, false);
+					
+				},
+				showData:function(e){
+					var ta = document.getElementById('ta');
+					var obj2 = JSON.parse(e.data);
+					var data1 = obj2.data;
+					var time1 = obj2.time
+					u1t = time1;
+					u2t = time1;
+					
+					ta.innerHTML += "\n"+data1;
+					e.close();
+				
+				}
+			
+			}
+		</script>
+	</head>
+	<body>
+		<select id = "Select">
+		<option>User1</option>
+		<option>User2</option>
+		</select>
+		<br><br>
+		<textarea cols="40" rows="10" id="ta"> </textarea>
+		<br><br>
+		<input type="text" id="in">
+		<input type="submit" value="submit" onclick="obj.addmessage()">
+		
+	</body>
+</html>
