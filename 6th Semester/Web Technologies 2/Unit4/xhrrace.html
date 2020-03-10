@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RACE</title>
+<script type="text/javascript">
+
+obj=
+{
+	
+	xhr1: new XMLHttpRequest(),
+	xhr2: new XMLHttpRequest(),
+	xhr3: new XMLHttpRequest(),
+	
+	getTime: function()
+	{
+		this.xhr1.onreadystatechange = this.updateTime;
+		this.xhr1.open("GET", "req1.php",true);
+		this.xhr1.send();
+		//Send the next request, staggered
+		setTimeout(this.secondReq, 2000);
+
+	},
+	
+	secondReq: function()
+	{
+		obj.xhr2.onreadystatechange = obj.updateTime;
+		obj.xhr2.open("GET", "req2.php",true);
+		obj.xhr2.send();
+		//Send the next request, staggered
+		setTimeout(obj.thirdReq, 2000);
+	},
+	
+	thirdReq: function()
+	{
+		obj.xhr3.onreadystatechange = obj.updateTime;
+		obj.xhr3.open("GET", "req3.php",true);
+		obj.xhr3.send();
+	},
+	
+	updateTime: function()
+	{
+
+		if(this.readyState == 4 && this.status == 200)
+		{
+			newdiv = document.createElement("div");
+			newdiv.innerHTML = this.responseText;
+			document.body.appendChild(newdiv);
+		}
+	}
+}
+</script>
+</head>
+<body>
+<input type="button" value="GET TIME" onclick="obj.getTime()"/>
+</body>
+</html>

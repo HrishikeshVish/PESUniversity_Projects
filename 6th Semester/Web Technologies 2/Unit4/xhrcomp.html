@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>COMPRESSION</title>
+<script type="text/javascript">
+
+obj=
+{
+	usn:null,
+	xhr: new XMLHttpRequest(),
+
+	getData: function()
+	{
+		this.xhr.onreadystatechange = this.updateData;
+		this.xhr.open("GET", "comp.php",true);
+		this.xhr.send();
+	
+	},
+			
+	updateData: function()
+	{
+
+		if(this.readyState == 4 && this.status == 200)
+		{
+			newdiv = document.createElement("div");
+			newdiv.innerHTML = this.responseText;
+			document.body.appendChild(newdiv);
+			
+			//How much compression has happened???
+			len = this.getResponseHeader("Content-length");
+			alert(len);
+		}
+	}
+}
+</script>
+</head>
+<body>
+<input type="button" value="GET DATA" onclick="obj.getData()"/>
+</body>
+</html>
