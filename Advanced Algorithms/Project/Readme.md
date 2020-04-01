@@ -1,4 +1,4 @@
-Contributors
-Ashwin R. Bharadwaj
-Hardik Gourisaria
-Hrishikesh V
+# Contributors
+## Ashwin R. Bharadwaj
+## Hardik Gourisaria
+## Hrishikesh V
